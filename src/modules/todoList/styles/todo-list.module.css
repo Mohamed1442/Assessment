@@ -1,0 +1,73 @@
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.todo-item {
+  padding: 2rem;
+  border: 1px solid #c9ccd3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-item-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.todo-item-description {
+  color: #858688;
+  font-style: italic;
+  font-size: 1.4rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.2rem;
+}
+
+.add-todo-btn {
+  background-color: #4f8af6;
+  border: none;
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.add-todo-btn:hover {
+  background-color: #4f89f6c9;
+  cursor: pointer;
+}
+
+.control {
+  display: flex;
+  gap: 1rem;
+}
+
+.control button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: red;
+  font-size: 2.6rem;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.empty-list {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

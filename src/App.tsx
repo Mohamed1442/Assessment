@@ -1,7 +1,5 @@
-import DashboardLayout from "./layouts/dashboard.layout";
-
 function App() {
-  return <DashboardLayout>Outlet</DashboardLayout>;
+  return <h1>Home Page</h1>;
 }
 
 export default App;

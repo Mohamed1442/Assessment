@@ -1,22 +1,24 @@
+import { createBrowserRouter } from "react-router-dom";
 import { ROUTES } from "../constants/routes";
+import TodoList from "../../modules/todoList/todo-list.page";
+import DashboardLayout from "../../layouts/dashboard.layout";
+import App from "../../App";
 
-const sidebarItems = [
+const router = createBrowserRouter([
   {
-    label: "Todo List",
-    to: ROUTES.TODO_LIST,
+    path: "/",
+    element: <DashboardLayout />,
+    children: [
+      {
+        index: true,
+        element: <App />,
+      },
+      {
+        path: ROUTES.TODO_LIST,
+        element: <TodoList />,
+      },
+    ],
   },
-  {
-    label: "Custom Hook",
-    to: ROUTES.CUSTOM_HOOK,
-  },
-  {
-    label: "Form Validation",
-    to: ROUTES.FORM_VALIDATION,
-  },
-  {
-    label: "Optimization",
-    to: ROUTES.COMPONENT_OPTIMIZATION,
-  },
-];
+]);
 
-export default sidebarItems;
+export default router;
