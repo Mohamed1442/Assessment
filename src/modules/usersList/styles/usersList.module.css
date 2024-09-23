@@ -1,0 +1,18 @@
+.list {
+  list-style: none;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-item {
+  border: 1px solid #777;
+  padding: 2rem;
+}
+
+.error {
+  font-size: 1.8rem;
+  color: red;
+  text-align: center;
+}
