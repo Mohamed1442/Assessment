@@ -1,5 +1,7 @@
+import DashboardLayout from "./layouts/dashboard.layout";
+
 function App() {
-  return <div>React App</div>;
+  return <DashboardLayout>Outlet</DashboardLayout>;
 }
 
 export default App;

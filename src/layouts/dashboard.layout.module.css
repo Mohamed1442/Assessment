@@ -1,0 +1,49 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 6rem;
+  color: #4f8af6;
+  font-weight: 600;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+  position: relative;
+  display: flex;
+  height: calc(100vh - 6rem);
+}
+
+.sidebar {
+  transition: all 0.3s ease-in;
+  height: 100%;
+  width: 20rem;
+  border-right: 1px solid #c9ccd394;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  /* This for mobile sidebar */
+  /* position: absolute; */
+}
+
+.sidebar a {
+  padding: 1.6rem 0.4rem;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #eef2fd;
+  border-left: 4px solid #4f8af6;
+}
+
+.outlet {
+  flex: 1;
+  padding: 2rem 2rem;
+}
