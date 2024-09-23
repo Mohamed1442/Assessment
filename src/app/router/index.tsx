@@ -5,6 +5,7 @@ import DashboardLayout from "../../layouts/dashboard.layout";
 import App from "../../App";
 import UsersList from "../../modules/usersList/usersList.page";
 import FormValidation from "../../modules/formValidation/formValidation.page";
+import OptimizationPage from "../../modules/optimization/optimization.page";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: ROUTES.FORM_VALIDATION,
         element: <FormValidation />,
+      },
+      {
+        path: ROUTES.COMPONENT_OPTIMIZATION,
+        element: <OptimizationPage />,
       },
     ],
   },

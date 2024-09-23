@@ -1,50 +1,82 @@
-# React + TypeScript + Vite
+# Front-End Developer Technical Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This assessment consists of multiple tasks aimed at evaluating your React skills, including state management, custom hooks, responsive design, form validation, and performance optimization.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Application Features
 
-## Expanding the ESLint configuration
+1. **Dynamic Todo List**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   - A form to add new todo items with a title and description.
+   - A list displaying all todos with options to mark them as completed or delete them.
+   - A filter to view all todos, only completed todos, or only incomplete todos.
+   - Todos are persisted in local storage to retain data after a page refresh.
+   - Basic validation ensures that both title and description are provided before adding a todo.
 
-- Configure the top-level `parserOptions` property like this:
+2. **Custom Hook (`useFetch`)**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   - A custom hook to handle data fetching from a public API.
+   - Returns the data, loading state, and error state.
+   - Displays loading indicators and error messages based on the state.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. **Responsive Navigation Menu**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   - A hamburger menu icon that toggles the visibility of navigation links on smaller screens.
+   - Styled using CSS modules.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+4. **Form with Validation**
+
+   - A registration form with fields for Full Name, Email, Password, and Terms Agreement.
+   - Client-side validation checks for:
+     - Non-empty Full Name
+     - Valid Email format
+     - Matching Password and Password Confirmation
+     - Checked Terms checkbox before submission
+   - Controlled components manage form inputs, with error messages displayed for validation failures.
+
+5. **Performance Optimization**
+   - Optimized a React component with performance issues using `React.memo`, `useMemo`, and `useCallback`.
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- React Hook Form
+- Yup for validation
+- Vercel for deployment
+
+## Demo
+
+You can view a live demo of the application [here](https://assessment-ten-iota.vercel.app/).
+
+## Setup Instructions
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/your-repository-name.git
+
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd your-repository-name
+
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
